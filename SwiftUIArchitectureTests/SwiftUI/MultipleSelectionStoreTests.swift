@@ -10,7 +10,7 @@ import XCTest
 struct MultipleSelectionStore {
     var options: [MultipleSelectionOption]
     var canSubmit: Bool {
-//        options.first(where: { $0.isSelected }) != nil
+//        options.first(where: { $0.isSelected }) != nil // other approach
         !options.filter(\.isSelected).isEmpty
     }
     
